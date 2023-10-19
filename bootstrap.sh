@@ -38,8 +38,7 @@ xxxCmd.Flags().StringP("name", "n", "", "Say hello to someone")
   PostRun
   PersistentPostRun
 
-如果子程序没有声明他们自己的该字段的实现, 他们将继承这些功能.
-如果子程序声明了他们自己的该字段的实现, 他们自己的该字段的实现会override父命令该字段的实现.
+The Persistent*Run functions will be inherited by children if they do not declare their own.
 
 
 xiaoqing@DESKTOP-I7F5KK1:~/debianEnvGoProj/cobra-demo$ go run main.go helloSubcommand nihao3rdLevelCommand 11 22 -o + -v
